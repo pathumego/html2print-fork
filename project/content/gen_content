@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+# This combines the markdwon files and convert to HTML using pandoc.
+# http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+DIR="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)";
+cd $DIR;
+pandoc *.md > ../content.html;
